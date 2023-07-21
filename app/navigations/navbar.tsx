@@ -12,7 +12,7 @@ export default function Navbar() {
     let logo_subtitle = font_class.className + " tracking-tight flex text-xs"
 
     return (
-        <div className='w-full border-b dark:border-b-zinc-700 border-b-zinc-300 bg-white justify-center flex z-[9999]'>
+        <div className='dark:text-zinc-200 dark:bg-zinc-950 w-full border-b dark:border-b-zinc-700 border-b-zinc-300 bg-white justify-center flex z-[9999]'>
             <div className='flex w-full px-5 py-3 max-w-5xl items-center justify-between select-none'>
                 <a className='text-gray-800 dark:text-gray-200' href='/'>
                     <span className={logo}> Reservio </span>
