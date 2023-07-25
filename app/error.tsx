@@ -7,6 +7,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export default function Error( { error, reset } : { error : Error; reset : () => void; }) {
 
+    const [retryCounter, setRetryCounter] = useState(0)
+
     const collapsibleElement = useRef<HTMLDivElement>(null);
     const [preventDoubleClick, setPreventDoubleClick] = useState(false)
     const handleCollapse = () => {
@@ -34,10 +36,39 @@ export default function Error( { error, reset } : { error : Error; reset : () =>
 
             <span className=' select-none'> But fret not, for this magic button may resolve the problem for you! </span>
 
-            <Button
-                className="rounded px-10 py-3 w-max mb-8 select-none"
-                onClick={() => reset()}
-            > Let's try that again </Button>
+            <div className="flex gap-4 mb-8 w-full flex-wrap">
+                <Button
+                    className="rounded px-10 py-3 w-max select-none"
+                    onClick={() => {
+                        setRetryCounter(retryCounter + 1)
+                        reset()
+                    }}
+                > Let's try that again </Button>
+
+                {retryCounter >= 10 ?
+
+                    <Button
+                        variant={'destructive'}
+                        className="rounded px-10 py-3 w-max select-none"
+                        onClick={() => {
+                            window.location.reload()
+                        }}
+                    > Try that again (angrily) </Button>
+
+                :
+
+                    <Button
+                        variant={'destructive'}
+                        className="rounded px-10 py-3 w-max select-none"
+                        onClick={() => {
+                            window.location.reload()
+                        }}
+                    > Try that again (angrily) </Button>
+
+                }
+            </div>
+
+
 
             <Alert className='flex flex-col gap-2 rounded-xl py-6 cut' ref={collapsibleElement} onClick={handleExpand}>
                 <Terminal className="h-4 w-4 mt-2" />
