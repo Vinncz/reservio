@@ -10,3 +10,10 @@ type User = {
         name: string
     ]
 }
+
+type Todo = {
+    userId: number,
+    id: number,
+    title: string,
+    completed: boolean,
+}
