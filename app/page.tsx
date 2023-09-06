@@ -8,6 +8,18 @@ import { useState, useEffect } from 'react'
 
 export default function Home() {
 
+    return (
+        <>
+            <MyReservation />
+
+            {/* <Calendar /> */}
+
+            {/* <SimpleCalculator /> */}
+        </>
+    )
+}
+
+function SimpleCalculator () {
     const [final, setFinal] = useState<number>(0)
     const [number, setNumber] = useState<number>(0)
     const [multiplier, setMultiplier] = useState<number>(1)
@@ -22,10 +34,6 @@ export default function Home() {
 
     return (
         <>
-            <MyReservation />
-
-            <Calendar />
-
             {final}
             <div className='flex flex-col border p-4 rounded gap-2'>
                 Number
