@@ -17,3 +17,14 @@ type Todo = {
     title: string,
     completed: boolean,
 }
+
+type ReservationObject = {
+    room_id     : Number,
+    user_id     : Number,
+    subject     : String,
+    priority_id : Number,
+    remark      : String,
+    start       : Date,
+    end         : Date,
+    pin         : String,
+}

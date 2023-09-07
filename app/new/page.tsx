@@ -1,18 +1,15 @@
 import React from 'react'
-import BackButton from '../reusable-components/back-button'
+import BackButton from '@/components/ui/back-button'
 import PageTitle from '../reusable-components/page-title'
 import { Separator } from '@/components/ui/separator'
 
-
-
 export default function page() {
-  // throw new Error("not today! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, dolore maxime! Expedita praesentium totam nobis laboriosam, accusamus id ratione minima ipsum nesciunt necessitatibus nam eligendi, et possimus dolorem commodi mollitia? sMinus deleniti soluta facere voluptate, perferendis laudantium inventore qui laboriosam. Porro cupiditate a dolor dolores voluptates voluptas dolore. Cupiditate deleniti sequi harum, voluptate architecto totam fugiat veritatis quas doloribus consequuntur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, dolore maxime! Expedita praesentium totam nobis laboriosam, accusamus id ratione minima ipsum nesciunt necessitatibus nam eligendi, et possimus dolorem commodi mollitia? sMinus deleniti soluta facere voluptate, perferendis laudantium inventore qui laboriosam. Porro cupiditate a dolor dolores voluptates voluptas dolore. Cupiditate deleniti sequi harum, voluptate architecto totam fugiat veritatis quas doloribus consequuntur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, dolore maxime! Expedita praesentium totam nobis laboriosam, accusamus id ratione minima ipsum nesciunt necessitatibus nam eligendi, et possimus dolorem commodi mollitia? sMinus deleniti soluta facere voluptate, perferendis laudantium inventore qui laboriosam. Porro cupiditate a dolor dolores voluptates voluptas dolore. Cupiditate deleniti sequi harum, voluptate architecto totam fugiat veritatis quas doloribus consequuntur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, dolore maxime! Expedita praesentium totam nobis laboriosam, accusamus id ratione minima ipsum nesciunt necessitatibus nam eligendi, et possimus dolorem commodi mollitia? sMinus deleniti soluta facere voluptate, perferendis laudantium inventore qui laboriosam. Porro cupiditate a dolor dolores voluptates voluptas dolore. Cupiditate deleniti sequi harum, voluptate architecto totam fugiat veritatis quas doloribus consequuntur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, dolore maxime! Expedita praesentium totam nobis laboriosam, accusamus id ratione minima ipsum nesciunt necessitatibus nam eligendi, et possimus dolorem commodi mollitia? sMinus deleniti soluta facere voluptate, perferendis laudantium inventore qui laboriosam. Porro cupiditate a dolor dolores voluptates voluptas dolore. Cupiditate deleniti sequi harum, voluptate architecto totam fugiat veritatis quas doloribus consequuntur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, dolore maxime! Expedita praesentium totam nobis laboriosam, accusamus id ratione minima ipsum nesciunt necessitatibus nam eligendi, et possimus dolorem commodi mollitia? sMinus deleniti soluta facere voluptate, perferendis laudantium inventore qui laboriosam. Porro cupiditate a dolor dolores voluptates voluptas dolore. Cupiditate deleniti sequi harum, voluptate architecto totam fugiat veritatis quas doloribus consequuntur?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, dolore maxime! Expedita praesentium totam nobis laboriosam, accusamus id ratione minima ipsum nesciunt necessitatibus nam eligendi, et possimus dolorem commodi mollitia? sMinus deleniti soluta facere voluptate, perferendis laudantium inventore qui laboriosam. Porro cupiditate a dolor dolores voluptates voluptas dolore. Cupiditate deleniti sequi harum, voluptate architecto totam fugiat veritatis quas doloribus consequuntur?")
-  // throw new Error("Not implemented yet!")
-  return (
-    <div className='gap-4 flex flex-col'>
-        <BackButton />
-        <PageTitle title="New Reservation"  />
-        {/* <Separator /> */}
-    </div>
-  )
+    return (
+        <div className='gap-4 flex flex-col'>
+            <BackButton />
+            <PageTitle title="New Reservation" />
+            <Separator />
+            asdasd
+        </div>
+    )
 }

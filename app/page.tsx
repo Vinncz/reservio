@@ -1,59 +1,36 @@
-"use client"
-import BackButton from './reusable-components/back-button'
 import PageTitle from './reusable-components/page-title'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Separator } from '@/components/ui/separator'
-import { Calendar } from '@/components/ui/calendar'
-import { useState, useEffect } from 'react'
+import fetcher from '@/lib/fetcher/fetcher'
 
-export default function Home() {
+// const ReservationObjectSchema = z.object({
+//     room_id     : z.number(),
+//     user_id     : z.number(),
+//     subject     : z.string(),
+//     priority_id : z.number(),
+//     remark      : z.string(),
+//     start       : z.date(),
+//     end         : z.date(),
+//     pin         : z.string(),
+// })
+
+// type ReservationObject = z.infer<typeof ReservationObjectSchema>
+
+export default async function Home () {
+
+    const res = await fetcher()
 
     return (
         <>
             <MyReservation />
-
-            {/* <Calendar /> */}
 
             {/* <SimpleCalculator /> */}
         </>
     )
 }
 
-function SimpleCalculator () {
-    const [final, setFinal] = useState<number>(0)
-    const [number, setNumber] = useState<number>(0)
-    const [multiplier, setMultiplier] = useState<number>(1)
-
-    useEffect(
-        () => {
-            const c = number * multiplier
-            setFinal(c)
-        }
-        , [number, multiplier]
-    )
-
-    return (
-        <>
-            {final}
-            <div className='flex flex-col border p-4 rounded gap-2'>
-                Number
-                <input placeholder='0' type="number" className='p-2 border rounded' onChange={(e) => {
-                    setNumber(parseInt(e.target.value))
-                }} />
-            </div>
-            <div className='flex flex-col border p-4 rounded gap-2'>
-                Multiplier
-                <input placeholder='1' type="number" className='p-2 border rounded' onChange={(e) => {
-                    setMultiplier(parseInt(e.target.value))
-                }} />
-            </div>
-        </>
-    )
-}
-
-function MyReservation( ) {
+function MyReservation () {
     return <div className='gap-4 flex flex-col'>
-        {/* <BackButton /> */}
         <PageTitle title="My Reservations" />
         <Separator />
         <div className="grid grid-cols-2 gap-4">
