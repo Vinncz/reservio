@@ -2,6 +2,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 import Navbar from './navigations/navbar'
+import dns from "dns";
+
+dns.setDefaultResultOrder("ipv4first")
 
 const lato = Lato({ subsets: ['latin'], weight: ["100", "300", "400", "700", '900'] })
 
