@@ -21,10 +21,8 @@ export default async function fetcher(endpoint: string, options = {}, debugMode 
 
     } catch (error) {
 
-        if (!debugMode) {
+        if (debugMode) {
             console.error("======================================================\n\n\n" + error + "\n\n\n======================================================");
-
-        } else {
 
         }
 

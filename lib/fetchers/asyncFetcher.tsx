@@ -24,8 +24,9 @@ export default async function asyncFetcher(endpoints: [], options = {}, debugMod
 
         // Check for errors in responses
         responses.forEach(response => {
-            if (!response.ok) {
-                throw new Error(`Error fetching data from ${response.url}: ${response.statusText}`);
+            if (!response.ok && debugMode) {
+                // throw new Error(`\nFailed to fetch data from "${response.url}".\n∟  Reason:\n   ${response.status} ${response.statusText}`);
+                console.log("======================================================\n\n\n" + `\nFailed to fetch data from "${response.url}".\n∟  Reason:\n   ${response.status} ${response.statusText}` + "\n\n\n======================================================");
             }
         });
 
