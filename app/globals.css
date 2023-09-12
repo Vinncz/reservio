@@ -9,6 +9,10 @@
     margin: 0;
 }
 
+.balanced {
+    text-wrap: balance;
+}
+
 @layer base {
     :root {
         --background: 0 0% 100%;

@@ -16,7 +16,7 @@ export default function Loading () {
                 Sit tight! We're preparing the page for you.
             </Balancer>
 
-            <Balancer className=' select-none'> Waiting for too long? May smashing the button below ease your boredom? </Balancer>
+            <Balancer className=' select-none'> Waited for too long? May smashing the button below ease your boredom? </Balancer>
 
             <div className="flex flex-wrap gap-4 mt-4">
                 <Button className="rounded px-10 py-3 w-max select-none" onClick={() => setCounter(counter + 1)}>

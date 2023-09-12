@@ -1,30 +1,62 @@
+type ApiResponse = {
+    status        : String,
+    message       : String,
+    data          : []
+}
+
+type Location = {
+    floor         : String,
+    landmark      : String
+}
+
 type User = {
-    id: number,
-    name: string,
-    address: {
-        street: string,
-        city: string,
-        postalCode: string
+    id            : String,
+    name          : String,
+    username      : String
+}
+
+type Room = {
+    id            : String,
+    name          : String,
+    announcement  : String,
+    location      : Location
+    capacity      : String,
+    facilities    : []
+}
+
+type Priority = {
+    id            : String,
+    name          : String
+}
+
+type Reservation = {
+    id            : String,
+    attributes    : {
+        subject         : String,
+        remark          : String,
+        start           : String,
+        end             : String,
+        pin             : String
+    },
+    relationships : {
+        room_id         : String,
+        user_id         : String,
+        priority_id     : String,
     }
-    aliases: [
-        name: string
-    ]
 }
 
-type Todo = {
-    userId: number,
-    id: number,
-    title: string,
-    completed: boolean,
-}
-
-type ReservationObject = {
-    room_id     : Number,
-    user_id     : Number,
-    subject     : String,
-    priority_id : Number,
-    remark      : String,
-    start       : Date,
-    end         : Date,
-    pin         : String,
+type ReservationWithRelation = {
+    id            : String,
+    attributes    : {
+        subject         : String,
+        remark          : String,
+        start           : Date,
+        end             : Date,
+        pin             : String
+    },
+    relationships : {
+        room            : Room,
+        user            : User,
+        priority        : Priority,
+    }
 }
