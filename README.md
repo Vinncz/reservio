@@ -6,7 +6,7 @@ It can show you about the upcoming bookings: for one room of whatnot, notify you
 
 For admins, you can insert new room(s) easily, audit the booking history for each room, etc!
 
-Reservio encorporated:
+Reservio encorporated: 
 - `tailwind css`
 - `shadcn-ui components`
 
